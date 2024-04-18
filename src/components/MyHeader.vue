@@ -1,7 +1,5 @@
 <script setup>
-import MyHearth from './icons/MyHearth.vue';
-import ShopCart from './icons/ShopCart.vue';
-import Searchİcon from './icons/Searchİcon.vue';
+import { AkHeart  , AkSearch , McShoppingCart2Line   } from "@kalimahapps/vue-icons";
 </script>
 
 <template>
@@ -27,13 +25,13 @@ import Searchİcon from './icons/Searchİcon.vue';
                 <div class="relative">
                     <input class=" border-none bg-[#f5f5f5] py-[7px] px-5 rounded focus:outline-none placeholder:text-xs"
                         placeholder="What are you looking for?" type="text">
-                    <Searchİcon class="h-6 w-6 absolute top-1/4 right-1" />
+                    <AkSearch  class="h-6 w-6 absolute top-1/4 right-1 text-black" />
                 </div>
                 <a href="#">
-                    <MyHearth class="h-6 w-6" />
+                    <AkHeart  class="h-6 w-6 text-black bg-transparent" />
                 </a>
                 <a href="#">
-                    <ShopCart class="h-6 w-6" />
+                    <McShoppingCart2Line  class="h-6 w-6 text-black" />
                 </a>
             </div>
         </div>

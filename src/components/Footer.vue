@@ -13,7 +13,7 @@
                     <input
                         class=" h-12 border-[1.5px] bg-transparent py-[12px] pl-4 rounded outline-none  focus:outline-none placeholder:text-xs placeholder:text-white"
                         placeholder="Enter your email" type="text">
-                    <SendIcon class="h-6 w-6 absolute top-1/4 right-1 cursor-pointer" />
+                    <AkSend  class="h-6 w-6 absolute top-1/4 right-1 cursor-pointer text-white" />
                 </div>
             </div>
             <div class="flex flex-col gap-4">
@@ -79,15 +79,15 @@
                         </a>
                     </div>
                 </div>
-                <ul class="flex gap-6">
+                <ul class="flex gap-6 items-end">
                     <li>
-                        <FbIcon class="h-6 w-6 text-[#fafafa]" />
+                        <CgFacebook class="h-7 w-7 text-[#fafafa]" />
                     </li>
                     <li>
-                        <InstgramIcon class="h-6 w-6 text-[#fafafa]" />
+                        <AkInstagramFill  class="h-6 w-6 text-[#fafafa]" />
                     </li>
                     <li>
-                        <LinkedinIcon class="h-6 w-6 text-[#fafafa]" />
+                        <AkLinkedInFill  class="h-6 w-6 text-[#fafafa]" />
                     </li>
                 </ul>
             </div>
@@ -99,10 +99,6 @@
 </template>
 
 <script setup>
-import SendIcon from './icons/SendIcon.vue';
-import FbIcon from '@/components/icons/FbIcon.vue'
-import InstgramIcon from '@/components/icons/InstgramIcon.vue'
-import LinkedinIcon from '@/components/icons/LinkedinIcon.vue'
-
+import { CgFacebook , AkInstagramFill , AkLinkedInFill , AkSend   } from "@kalimahapps/vue-icons";
 
 </script>

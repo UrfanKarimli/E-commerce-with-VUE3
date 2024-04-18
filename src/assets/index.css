@@ -4,4 +4,6 @@
 @tailwind utilities;
 
 
-  
+  .radial-gradient {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.418) 0%,  rgba(0, 0, 0, 0.356) 100%)
+  }
