@@ -16,9 +16,9 @@ import { AkHeart  , AkSearch , McShoppingCart2Line   } from "@kalimahapps/vue-ic
         <div class=" h-[94px] container flex items-center justify-between border-b-black/30">
             <h2 class=" text-2xl font-bold">Exclusive</h2>
             <nav class=" flex gap-12">
-                <a class="text-base font-poppins font-normal text-center" href="#">Home</a>
+                <a class="text-base font-poppins font-normal text-center" href="/">Home</a>
                 <a class="text-base font-poppins font-normal text-center" href="#">Contact</a>
-                <a class="text-base font-poppins font-normal text-center" href="#">About</a>
+                <a class="text-base font-poppins font-normal text-center" href="/about">About</a>
                 <a class="text-base font-poppins font-normal text-center" href="#">Sign Up</a>
             </nav>
             <div class="flex items-center gap-6">
