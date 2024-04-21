@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router'
 <template>
 
   <my-header />
-  <main>
+  <main class="mt-[145px]">
     <RouterView />
   </main>
   <my-footer />

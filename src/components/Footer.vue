@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-gradient-to-r from-sky-400 to-blue-600">
+    <footer class="bg-gradient-to-r from-[#4b5563] to-[#030712]">
         <div class=" container pt-20 pb-[60px] flex items-start justify-between">
             <div class="flex flex-col gap-4">
                 <h3 class=" text-2xl font-bold text-[#fafafa] font-inter">Exclusive</h3>
@@ -13,7 +13,7 @@
                     <input
                         class=" h-12 border-[1.5px] bg-transparent py-[12px] pl-4 rounded outline-none  focus:outline-none placeholder:text-xs placeholder:text-white"
                         placeholder="Enter your email" type="text">
-                    <AkSend  class="h-6 w-6 absolute top-1/4 right-1 cursor-pointer text-white" />
+                    <AkSend class="h-6 w-6 absolute top-1/4 right-1 cursor-pointer text-white" />
                 </div>
             </div>
             <div class="flex flex-col gap-4">
@@ -84,10 +84,10 @@
                         <CgFacebook class="h-7 w-7 text-[#fafafa]" />
                     </li>
                     <li>
-                        <AkInstagramFill  class="h-6 w-6 text-[#fafafa]" />
+                        <AkInstagramFill class="h-6 w-6 text-[#fafafa]" />
                     </li>
                     <li>
-                        <AkLinkedInFill  class="h-6 w-6 text-[#fafafa]" />
+                        <AkLinkedInFill class="h-6 w-6 text-[#fafafa]" />
                     </li>
                 </ul>
             </div>
@@ -99,6 +99,6 @@
 </template>
 
 <script setup>
-import { CgFacebook , AkInstagramFill , AkLinkedInFill , AkSend   } from "@kalimahapps/vue-icons";
+import { CgFacebook, AkInstagramFill, AkLinkedInFill, AkSend } from "@kalimahapps/vue-icons";
 
 </script>

@@ -1,8 +1,8 @@
 <template>
     <section class="container flex flex-col mt-32 gap-10">
-        <div class="todays flex gap-4 ">
-            <span class=" w-5 h-10 rounded bg-[#DB4444]"></span>
-            <p class=" text-[#DB4444] text-base font-bold font-poppins">Our Products</p>
+        <div class="todays flex gap-4 items-center">
+            <span class=" w-5 h-10 rounded bg-gradient-to-r from-sky-400 to-blue-600 "></span>
+            <p class=" text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 text-xl font-bold font-poppins">Our Products</p>
         </div>
         <div class="flash flex justify-between">
             <div class="flex gap-20 items-end">
@@ -20,10 +20,10 @@
             </div>
         </div>
         <div class="flex flex-wrap justify-between">
-            <ImgCard v-for="item in datas.slice(8, 16)" :key="item.id" :data="item" />
+            <ImgCard v-for="item in datas" :key="item.id" :data="item" />
         </div>
         <div class="flex items-center justify-center mt-5">
-            <button class=" py-4 px-12 bg-[#DB4444] rounded text-base font-medium font-poppins text-[#fafafa]"> View All
+            <button class="  py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]"> View All
                 Products</button>
         </div>
     </section>
@@ -40,7 +40,7 @@ let datas = ref([])
 onMounted(async () => {
     let res = await axios.get('https://fakestoreapi.com/products')
     if (res?.data) {
-        datas.value = res.data
+        datas.value = res.data.slice(8, 16)
     }
 })
 

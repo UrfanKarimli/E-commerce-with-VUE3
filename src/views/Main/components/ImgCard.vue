@@ -1,8 +1,8 @@
 <template>
-    <div class="card flex flex-col  w-[270px] h-[350px] gap-4 box-border">
+    <div class="card flex flex-col  w-[270px] h-[350px] gap-4 box-border my-6">
         <div class="img relative bg-[#f5f5f5] w-full h-[250px] flex items-center justify-center">
             <img class=" w-[190px] h-[180px] object-cover object-center" :src="data?.image" alt="">
-            <span class=" absolute top-3 left-3 w-[55px] h-[26px] bg-[#DB4444] text-center text-[#fafafa]">-25%
+            <span class=" absolute top-3 left-3 w-[55px] h-[26px] bg-gradient-to-r from-sky-400 to-blue-600 text-center text-[#fafafa]">-25%
             </span>
             <button class=" absolute top-3 right-3 h-9 w-9 bg-white rounded-full flex items-center justify-center ">
                 <AkHeart class="text-base" />
@@ -25,7 +25,7 @@
                 <AnFilledStar class=" h-5 w-5 text-[#FFAD33]" />
                 <AnFilledStar class=" h-5 w-5 text-[#FFAD33]" />
             </div>
-            <span class="font-poppins font-bold text-sm text-black/50">(88)</span>
+            <span class="font-poppins font-bold text-sm text-black/50">({{ data?.rating.rate }})</span>
         </div>
     </div>
 </template>

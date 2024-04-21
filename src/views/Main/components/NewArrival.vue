@@ -1,13 +1,15 @@
 <template>
     <section class="container flex flex-col mt-32 mb-10 gap-10">
-        <div class="todays flex gap-4 ">
-            <span class=" w-5 h-10 rounded bg-[#DB4444]"></span>
-            <p class=" text-[#DB4444] text-base font-bold font-poppins">Our Products</p>
+        <div class="todays flex gap-4 items-center">
+            <span class=" w-5 h-10 rounded bg-gradient-to-r from-sky-400 to-blue-600 "></span>
+            <p
+                class=" text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600 text-xl font-bold font-poppins">
+                Featured</p>
         </div>
         <div class="flash flex justify-between">
             <div class="flex gap-20 items-end">
                 <h3 class=" text-[36px] font-bold font-inter">
-                    Explore Our Products
+                    New Arrival
                 </h3>
             </div>
 
@@ -109,13 +111,12 @@
                     </h4>
                     <p class=" font-poppins font-normal text-sm">We reurn money within 30 days</p>
                 </div>
-
             </div>
         </div>
     </section>
 </template>
 
 <script setup>
-import { AnOutlinedArrowRight, AnOutlinedArrowLeft, AkHeart, AkEyeOpen, AnFilledStar, LaShippingFastSolid, ThHeadphoneAlt, BsShieldCheck } from "@kalimahapps/vue-icons";
+import { LaShippingFastSolid, ThHeadphoneAlt, BsShieldCheck } from "@kalimahapps/vue-icons";
 
 </script>

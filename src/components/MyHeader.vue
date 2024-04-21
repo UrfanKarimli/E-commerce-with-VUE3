@@ -3,8 +3,8 @@ import { AkHeart  , AkSearch , McShoppingCart2Line   } from "@kalimahapps/vue-ic
 </script>
 
 <template>
-    <header class="border  border-b-black/30 ">
-        <div class="h-12 bg-gradient-to-r from-sky-400 to-blue-600 flex items-center  text-white  w-full  ">
+    <header class="border w-full fixed top-0 z-40 border-b-black/30 ">
+        <div class="h-12 bg-gradient-to-r from-[#4b5563] to-[#030712] flex items-center  text-white  w-full  ">
             <div class="container flex items-center justify-end gap-28">
                 <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href="#">ShopNow</a></p>
                 <select class="bg-transparent outline-none border-none">
@@ -13,13 +13,14 @@ import { AkHeart  , AkSearch , McShoppingCart2Line   } from "@kalimahapps/vue-ic
                 </select>
             </div>
         </div>
-        <div class=" h-[94px] container flex items-center justify-between border-b-black/30">
+        <div class=" bg-white h-[94px] container flex items-center justify-between border-b-black/30">
             <h2 class=" text-2xl font-bold">Exclusive</h2>
             <nav class=" flex gap-12">
-                <a class="text-base font-poppins font-normal text-center" href="/">Home</a>
-                <a class="text-base font-poppins font-normal text-center" href="#">Contact</a>
-                <a class="text-base font-poppins font-normal text-center" href="/about">About</a>
-                <a class="text-base font-poppins font-normal text-center" href="#">Sign Up</a>
+                <RouterLink class="text-base font-poppins font-normal text-center" to="/">Home</RouterLink>
+                <RouterLink class="text-base font-poppins font-normal text-center" to="/contact">Contact</RouterLink>
+                <RouterLink class="text-base font-poppins font-normal text-center" to="/about">About</RouterLink>
+                <RouterLink class="text-base font-poppins font-normal text-center" to="/">Sign Up</RouterLink>
+            
             </nav>
             <div class="flex items-center gap-6">
                 <div class="relative">
