@@ -19,7 +19,7 @@ import { AkHeart  , AkSearch , McShoppingCart2Line   } from "@kalimahapps/vue-ic
                 <RouterLink class="text-base font-poppins font-normal text-center" to="/">Home</RouterLink>
                 <RouterLink class="text-base font-poppins font-normal text-center" to="/contact">Contact</RouterLink>
                 <RouterLink class="text-base font-poppins font-normal text-center" to="/about">About</RouterLink>
-                <RouterLink class="text-base font-poppins font-normal text-center" to="/">Sign Up</RouterLink>
+                <RouterLink class="text-base font-poppins font-normal text-center" to="/signup">Sign Up</RouterLink>
             
             </nav>
             <div class="flex items-center gap-6">

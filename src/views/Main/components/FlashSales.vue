@@ -2,14 +2,15 @@
     <section class=" container flex flex-col mt-32 gap-10">
         <div class="todays flex gap-4 items-center">
             <span class=" w-5 h-10 rounded bg-gradient-to-r from-sky-400 to-blue-600"></span>
-            <p class="  text-xl font-bold font-poppins text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">Today’s</p>
+            <p
+                class="  text-xl font-bold font-poppins text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
+                Today’s</p>
         </div>
         <div class="flash flex justify-between">
             <div class="flex gap-20 items-end">
                 <h3 class=" text-[36px] font-bold font-inter">
                     Flash Sales
                 </h3>
-
                 <div class="flex w-[302px] justify-between items-center">
                     <div class="flex flex-col">
                         <p class="text-xs font-medium font-poppins">Days</p>
@@ -32,20 +33,19 @@
                     </div>
                 </div>
             </div>
-            <div class="btns flex gap-2 items-end">
-                <button class=" h-12 w-12 bg-[#f5f5f5] rounded-full flex items-center justify-center">
-                    <AnOutlinedArrowLeft class="h-6 w-6" />
-                </button>
-                <button class=" h-12 w-12 bg-[#f5f5f5] rounded-full flex items-center justify-center">
-                    <AnOutlinedArrowRight class="h-6 w-6" />
-                </button>
-            </div>
         </div>
-        <div class="flex flex-wrap justify-between">
-            <ImgCard v-for="item in datas" :key="item.id" :data="item" />
+        <div class="w-full relative">
+            <Carousel class="w-full" :value="datas" :numVisible="3" :numScroll="1"
+                :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
+                <template #item="slotProps">
+                    <ImgCard :data="slotProps.data" />
+                </template>
+            </Carousel>
         </div>
         <div class="flex items-center justify-center mt-5">
-            <button class=" py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]"> View All
+            <button
+                class=" py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]">
+                View All
                 Products</button>
         </div>
         <hr class="my-10">
@@ -53,10 +53,10 @@
 </template>
 
 <script setup>
-import { AnOutlinedArrowRight, AnOutlinedArrowLeft, } from "@kalimahapps/vue-icons";
 import axios from "axios";
 import { onMounted, ref } from "vue";
 import ImgCard from "./ImgCard.vue";
+import Carousel from "primevue/carousel";
 
 let datas = ref([])
 
@@ -65,7 +65,7 @@ let datas = ref([])
 const FetchData = async () => {
     let res = await axios.get('https://fakestoreapi.com/products')
     if (res?.data) {
-        datas.value = res.data.slice(0, 4)
+        datas.value = res.data.slice(0, 9)
     }
 }
 
@@ -82,7 +82,28 @@ let time = ref({
     minutes: '00',
     seconds: '00'
 })
-
+const responsiveOptions = ref([
+    {
+        breakpoint: '1400px',
+        numVisible: 4,
+        numScroll: 1
+    },
+    {
+        breakpoint: '1199px',
+        numVisible: 3,
+        numScroll: 1
+    },
+    {
+        breakpoint: '767px',
+        numVisible: 2,
+        numScroll: 1
+    },
+    {
+        breakpoint: '575px',
+        numVisible: 1,
+        numScroll: 1
+    }
+]);
 
 
 const updateCountdown = () => {
@@ -96,3 +117,42 @@ const updateCountdown = () => {
 }
 
 </script>
+
+<style lang="css">
+li button {
+    display: none;
+}
+
+div[role="group"] {
+    width: 25% !important;
+    margin: 5px !important;
+}
+
+button[data-pc-section="nextbutton"] {
+    position: absolute;
+    right: 0;
+    top: -60px;
+    background-color: #f5f5f5;
+    height: 45px;
+    width: 45px;
+
+}
+
+button[data-pc-section="previousbutton"] {
+    position: absolute;
+    right: 60px;
+    top: -60px;
+    background-color: #f5f5f5;
+    height: 45px;
+    width: 45px;
+
+}
+
+button[data-pc-section="nextbutton"]:hover {
+    background-color: #d1cfcf;
+}
+
+button[data-pc-section="previousbutton"]:hover {
+    background-color: #d1cfcf;
+}
+</style>

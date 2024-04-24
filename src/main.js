@@ -6,6 +6,9 @@ import MyHeader from './components/MyHeader.vue'
 import Footer from '@/components/Footer.vue'
 import PrimeVue from 'primevue/config';
 import Lara from '@/presets/lara';
+
+import Tooltip from 'primevue/tooltip';
+
 const app = createApp(App)
 app.use(PrimeVue, {
     unstyled: true,
@@ -13,5 +16,7 @@ app.use(PrimeVue, {
 });
 app.component('my-header', MyHeader)
 app.component('my-footer', Footer)
+app.directive('tooltip', Tooltip);
+
 app.use(router)
 app.mount('#app')
