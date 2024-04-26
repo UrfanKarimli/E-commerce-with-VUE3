@@ -36,17 +36,18 @@
         </div>
         <div class="w-full relative">
             <Carousel class="w-full" :value="datas" :numVisible="3" :numScroll="1"
-                :responsiveOptions="responsiveOptions" circular :autoplayInterval="3000">
+                :responsiveOptions="responsiveOptions" circular :autoplayInterval="93000">
                 <template #item="slotProps">
-                    <ImgCard :data="slotProps.data" />
+                    <ImgCard :data="slotProps.data" :key="slotProps.data" />
                 </template>
             </Carousel>
         </div>
         <div class="flex items-center justify-center mt-5">
-            <button
+            <RouterLink to="/all-lists"
                 class=" py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]">
                 View All
-                Products</button>
+                Products
+            </RouterLink>
         </div>
         <hr class="my-10">
     </section>
@@ -57,8 +58,12 @@ import axios from "axios";
 import { onMounted, ref } from "vue";
 import ImgCard from "./ImgCard.vue";
 import Carousel from "primevue/carousel";
-
+import { useRouter } from "vue-router";
 let datas = ref([])
+
+const router = useRouter()
+
+
 
 
 

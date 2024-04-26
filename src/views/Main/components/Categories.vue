@@ -12,17 +12,11 @@
                     Browse By Category
                 </h3>
             </div>
-            <div class="btns flex gap-2 items-end">
-                <button class=" h-12 w-12 bg-[#f5f5f5] rounded-full flex items-center justify-center">
-                    <AnOutlinedArrowLeft class="h-6 w-6" />
-                </button>
-                <button class=" h-12 w-12 bg-[#f5f5f5] rounded-full flex items-center justify-center">
-                    <AnOutlinedArrowRight class="h-6 w-6" />
-                </button>
-            </div>
+
         </div>
         <div class=" flex justify-between">
-            <div v-for="item in Box" class="box h-[145px] w-[170px] rounded border border-black/30 flex items-center justify-center">
+            <div v-for="item in Box"
+                class="box h-[145px] w-[170px] rounded border border-black/30 flex items-center justify-center">
                 <div class="flex gap-3 flex-col items-center">
                     <component :is="item?.icon" class="h-9 w-12 text-black" />
                     <span class="font-poppins font-normal text-base"> {{ item?.title }} </span>

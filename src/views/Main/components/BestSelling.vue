@@ -10,9 +10,10 @@
                     Best Selling Products
                 </h3>
             </div>
-            <button class=" py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]">
+            <RouterLink to="/all-lists"
+                class=" py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]">
                 View All
-            </button>
+            </RouterLink>
         </div>
         <div class="flex flex-wrap justify-between">
             <ImgCard v-for="item in datas" :key="item.id" :data="item" />

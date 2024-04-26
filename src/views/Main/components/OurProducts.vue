@@ -10,27 +10,29 @@
                     Explore Our Products
                 </h3>
             </div>
-            <div class="btns flex gap-2 items-end">
+            <!-- <div class="btns flex gap-2 items-end">
                 <button class=" h-12 w-12 bg-[#f5f5f5] rounded-full flex items-center justify-center">
                     <AnOutlinedArrowLeft class="h-6 w-6" />
                 </button>
                 <button class=" h-12 w-12 bg-[#f5f5f5] rounded-full flex items-center justify-center">
                     <AnOutlinedArrowRight class="h-6 w-6" />
                 </button>
-            </div>
+            </div> -->
         </div>
         <div class="flex flex-wrap justify-between">
             <ImgCard v-for="item in datas" :key="item.id" :data="item" />
         </div>
         <div class="flex items-center justify-center mt-5">
-            <button class="  py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]"> View All
-                Products</button>
+              <RouterLink to="/all-lists"
+                class=" py-4 px-12 bg-gradient-to-r from-sky-400 to-blue-600 rounded text-base font-medium font-poppins text-[#fafafa]">
+                View All
+                Products
+            </RouterLink>
         </div>
     </section>
 </template>
 
 <script setup>
-import { AnOutlinedArrowRight, AnOutlinedArrowLeft, AkHeart, AkEyeOpen, AnFilledStar } from "@kalimahapps/vue-icons";
 import axios from "axios";
 import { onMounted, ref } from "vue";
 import ImgCard from "./ImgCard.vue";
