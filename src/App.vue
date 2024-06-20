@@ -12,3 +12,10 @@ import { RouterView } from 'vue-router'
   <my-footer />
 
 </template>
+
+<style>
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+</style>

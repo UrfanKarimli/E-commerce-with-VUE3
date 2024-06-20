@@ -13,7 +13,8 @@ import { AkHeart  , AkSearch , McShoppingCart2Line   } from "@kalimahapps/vue-ic
                 </select>
             </div>
         </div>
-        <div class=" bg-white h-[94px] container flex items-center justify-between border-b-black/30">
+        <div class="w-full bg-white">
+            <div class=" bg-white h-[94px] container flex items-center justify-between border-b-black/30">
             <h2 class=" text-2xl font-bold">Exclusive</h2>
             <nav class=" flex gap-12">
                 <RouterLink class="text-base font-poppins font-normal text-center" to="/">Home</RouterLink>
@@ -36,6 +37,8 @@ import { AkHeart  , AkSearch , McShoppingCart2Line   } from "@kalimahapps/vue-ic
                 </a>
             </div>
         </div>
+        </div>
+        
     </header>
 
 </template>

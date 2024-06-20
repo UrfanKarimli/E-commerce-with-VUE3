@@ -112,7 +112,7 @@ const responsiveOptions = ref([
 
 
 const updateCountdown = () => {
-    const targetDate = new Date('2024-05-20T00:00:00');
+    const targetDate = new Date('2024-07-20T00:00:00');
     const now = new Date();
     const difference = targetDate - now;
     time.value.days = String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0');
